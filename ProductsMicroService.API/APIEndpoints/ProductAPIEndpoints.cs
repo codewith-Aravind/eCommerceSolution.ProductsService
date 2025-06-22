@@ -74,7 +74,7 @@ public static class ProductAPIEndpoints
 
 
 
-        // lete /api/products/{id:guid}
+        // Delete /api/products/{id:guid}
         app.MapDelete("/api/products/{ProductID:guid}", async (Guid ProductID, IProductsService productsService) =>
         {
             bool isDeleted = await productsService.DeleteProductAsync(ProductID);
